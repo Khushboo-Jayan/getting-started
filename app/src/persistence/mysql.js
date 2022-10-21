@@ -119,6 +119,16 @@ async function removeItem(id) {
     });
 }
 
+// async function clearAll(item) {
+//     return new Promise((acc, rej) => {
+//         pool.query('DELETE * FROM todo_items', (err, rows) =>{
+//             if (err) return rej(err);
+//             acc();
+//         });
+//     });
+// }
+
+
 module.exports = {
     init,
     teardown,
@@ -127,4 +137,5 @@ module.exports = {
     storeItem,
     updateItem,
     removeItem,
+    // clearAll,
 };

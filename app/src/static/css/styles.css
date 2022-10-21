@@ -11,6 +11,18 @@ body {
     height: 100%;
 }
 
+#buttonIcon {
+    background-color: #4CAF50; /* Green */
+    opacity: .6;
+    border-radius: 15px;
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }
 
 .item {
     background-color: white;

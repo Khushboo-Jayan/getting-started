@@ -102,6 +102,22 @@ async function removeItem(id) {
     });
 }
 
+
+// async function clearAll(id) {
+//     return new Promise((acc, rej) => {
+//         db.all('DELETE * FROM todo_items', (err, rows) => {
+//             if (err) return rej(err);
+//             acc(
+//                 rows.map(item =>
+//                     Object.assign({}, item, {
+//                         completed: item.completed === 1,
+//                     }),
+//                 )[0],
+//             );
+//         });
+//     });
+// }
+
 module.exports = {
     init,
     teardown,
@@ -110,4 +126,5 @@ module.exports = {
     storeItem,
     updateItem,
     removeItem,
+    // clearAll,
 };

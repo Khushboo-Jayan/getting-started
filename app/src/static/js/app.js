@@ -13,6 +13,7 @@ function App() {
 
 function TodoListCard() {
     const [items, setItems] = React.useState(null);
+    const { Form, InputGroup, Button } = ReactBootstrap;
 
     React.useEffect(() => {
         fetch('/items')
@@ -47,10 +48,21 @@ function TodoListCard() {
         [items],
     );
 
+    // const onClearItem = React.useCallback(
+    //     () => {
+    //         setItems([]);
+    //     },
+    //     [items],
+    // );
+    
+
     if (items === null) return 'Loading...';
 
     return (
         <React.Fragment>
+            {/* <Button onClick= {onClearItem}>DELETE ALL
+                </Button> */}
+            
             <AddItemForm onNewItem={onNewItem} />
             {items.length === 0 && (
                 <p className="text-center">You have no todo items yet! Add one above!</p>

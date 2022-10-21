@@ -14,6 +14,23 @@
         <title>Todo App</title>
     </head>
     <body>
+        <button id = "buttonIcon"onclick="myFunction()">Your name</button>
+
+        <p id="demo" style="color:white;"></p>
+
+        <script>
+        function myFunction() {
+        let text;
+        let person = prompt("Please enter your name:", "Harry Potter");
+        if (person == null || person == "") {
+            text = "User cancelled the prompt.";
+        } else {
+            text = "Hello " + person + "! This is your to-do list of the week?";
+        }
+        document.getElementById("demo").innerHTML = text;
+        }
+        </script>
+
         <div id="heading"><h2 style="color:black;">Task Manager</h2></div>
         </br>
         <div id="root"></div>
