@@ -48,20 +48,23 @@ function TodoListCard() {
         [items],
     );
 
-    // const onClearItem = React.useCallback(
-    //     () => {
-    //         setItems([]);
-    //     },
-    //     [items],
-    // );
+    const onClearItem = React.useCallback(
+        () => {
+            setItems([]);
+        },
+        [items],
+    );
     
 
     if (items === null) return 'Loading...';
 
     return (
         <React.Fragment>
-            {/* <Button onClick= {onClearItem}>DELETE ALL
-                </Button> */}
+            {/* <div style={{padding: 15 }}>
+                <Button style={{ background: 'green', opacity: .5, padding: 15, border: 'green'}}
+                onClick= {onClearItem} 
+            >DELETE ALL
+                </Button></div> */}
             
             <AddItemForm onNewItem={onNewItem} />
             {items.length === 0 && (
